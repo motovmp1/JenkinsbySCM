@@ -1,6 +1,7 @@
 node('master'){
     stage('Checkout'){
         echo 'git'
+	git credentialsId: 'motovmp1', url: 'https://github.com/motovmp1/JenkinsbySCM.git'
     }
     stage ('Build'){
         echo 'build'
