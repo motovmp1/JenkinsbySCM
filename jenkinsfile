@@ -7,6 +7,6 @@ node('master'){
     stage ('Build'){
         echo 'build'
 	bat 'ping 8.8.8.8 -n 10 > nul'
-	emailext body: 'Test Pass after checkout', subject: 'github', to: 'vinicius.pinho@bee-eng.pt'
+	emailext body: 'Teste APP Pass', subject: 'Teste Jenkins', to: 'vinicius.pinho@bee-eng.pt'
     }
 }
