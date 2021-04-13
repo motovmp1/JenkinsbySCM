@@ -1,0 +1,8 @@
+node('master'){
+    stage('Checkout'){
+        echo 'git'
+    }
+    stage ('Build'){
+        echo 'build'
+    }
+}
