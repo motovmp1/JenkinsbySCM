@@ -1,5 +1,5 @@
 node('master'){
-    stage('Checkout'){
+    stage('Checkout master'){
         echo 'git'
 	git credentialsId: 'motovmp1', url: 'https://github.com/motovmp1/JenkinsbySCM.git'
 	bat 'ping 8.8.8.8 -n 10 > nul'
