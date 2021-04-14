@@ -11,5 +11,8 @@ node('master'){
     stage  ('Send Email status'){
     	emailext body: 'Teste APP Pass', subject: 'Teste Jenkins', to: 'vinicius.pinho@bee-eng.pt'
     }
+    stage ('cleaner'){
+    	echo 'cleaner stage'
+    }
     
 }
