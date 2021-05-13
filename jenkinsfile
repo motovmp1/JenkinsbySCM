@@ -1,10 +1,10 @@
 node('master'){
-    stage('Checkout master'){
+    stage('Checkout master turma 2'){
         echo 'git'
 	git credentialsId: 'motovmp1', url: 'https://github.com/motovmp1/JenkinsbySCM.git'
 	bat 'ping 8.8.8.8 -n 10 > nul'
     }
-    stage ('Build'){
+    stage ('Build2'){
         echo 'build'
 	bat 'ping 8.8.8.8 -n 10 > nul'
     }
@@ -14,5 +14,8 @@ node('master'){
     stage ('cleaner'){
     	echo 'cleaner stage'
 	echo 'cleaner stage2'
+    }
+    stage ('mudanca online'){
+    	echo 'Teste de alteracao'
     }
 }
