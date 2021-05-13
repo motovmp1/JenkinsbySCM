@@ -4,14 +4,14 @@ node('master'){
 	git credentialsId: 'motovmp1', url: 'https://github.com/motovmp1/JenkinsbySCM.git'
 	bat 'ping 8.8.8.8 -n 10 > nul'
     }
-    stage ('Build2'){
+    stage ('Build2 - Dev Server'){
         echo 'build'
 	bat 'ping 8.8.8.8 -n 10 > nul'
     }
     stage  ('Send Email status'){
     	mail bcc: '', body: 'Email testes', cc: '', from: '', replyTo: '', subject: 'Teste de Email', to: 'vinicius.pinho@bee-eng.pt'
     }
-    stage ('cleaner'){
+    stage ('Unittest - QA Developer'){
     	echo 'cleaner stage'
 	echo 'cleaner stage2'
     }
