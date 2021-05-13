@@ -14,10 +14,4 @@ node('master'){
     stage ('cleaner'){
     	echo 'cleaner stage'
     }
-    post {
-        always {
-            echo 'One way or another, I have finished'
-            
-        }
-	}
 }
