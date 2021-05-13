@@ -9,7 +9,7 @@ node('master'){
 	bat 'ping 8.8.8.8 -n 10 > nul'
     }
     stage  ('Send Email status'){
-    	emailext body: 'teste', subject: 'teste', to: 'vinicius.pinho@bee-eng.pt'
+    	mail bcc: '', body: 'Email testes', cc: '', from: '', replyTo: '', subject: 'Teste de Email', to: 'vinicius.pinho@bee-eng.pt'
     }
     stage ('cleaner'){
     	echo 'cleaner stage'
